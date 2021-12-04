@@ -11,11 +11,16 @@ class Email:
     def login(self):
         # account credentials
         username = input("Enter Email Address: ")
-        password = input("Enter Password: ")
+        authenticate = False
+        while (authenticate == False):
+            password = input("Enter Password: ")
 
-        # authenticate
-        self.imap.login(username, password)
-
+            # authenticate
+            try:
+                self.imap.login(username, password)
+                authenticate = True
+            except:
+                print("Password is incorrect. Please try again.")
         return 1
 
     def logout(self):
