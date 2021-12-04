@@ -45,19 +45,19 @@ class Email:
 
         return 1
 
-    def filterByDate(self):
-        # to get mails after a specific date
-        status, self.messages = self.imap.search(None, 'SINCE "01-JAN-2020"')
-        # to get mails before a specific date
-        status, self.messages = self.imap.search(None, 'BEFORE "01-JAN-2020"')
+    # def filterByDate(self):
+    #     # to get mails after a specific date
+    #     status, self.messages = self.imap.search(None, 'SINCE "01-JAN-2020"')
+    #     # to get mails before a specific date
+    #     status, self.messages = self.imap.search(None, 'BEFORE "01-JAN-2020"')
+    #
+    #     return 1
 
-        return 1
-
-    def getAllMail(self):
-        # to get all mails
-        status, self.messages = self.imap.search(None, "ALL")
-
-        return 1
+    # def getAllMail(self):
+    #     # to get all mails
+    #     status, self.messages = self.imap.search(None, "ALL")
+    #
+    #     return 1
 
     def getMailIDs(self):
         # convert messages to a list of email IDs
@@ -90,7 +90,7 @@ class Email:
 
         return 1
 
-    def emptyBin(self):
-        # permanently remove mails that are marked as deleted
-        # from the selected mailbox (in this case, INBOX)
-        imap.expunge()
+    # def emptyBin(self):
+    #     # permanently remove mails that are marked as deleted
+    #     # from the selected mailbox (in this case, INBOX)
+    #     imap.expunge()
