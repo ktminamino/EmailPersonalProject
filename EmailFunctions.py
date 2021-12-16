@@ -1,6 +1,7 @@
 import imaplib
 # import email
 # from email.header import decode_header
+from getpass import getpass
 
 class Email:
     def __init__(self):
@@ -13,7 +14,7 @@ class Email:
         username = input("Enter Email Address: ")
         authenticate = False
         while (authenticate == False):
-            password = input("Enter Password: ")
+            password = getpass()
 
             # authenticate
             try:
